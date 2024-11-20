@@ -19,9 +19,31 @@ const Bulb = () => {
         >
           ON/OFF
         </button>
+        <div className="relative">
+          <div
+            className={`relative h-[3px] w-48 ${isOn ? "bg-blue-500" : "bg-blue-500"}`}
+          >
+            {!isOn && (
+              <>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-red-500">
+                  ✖️
+                </div>
+              </>
+            )}
+            {isOn && (
+              <div className="absolute h-[3px] w-48 flex">
+                <div className="animate-pulse bg-yellow-300 h-full w-[10%]"></div>
+                <div className="bg-blue-500 h-full w-[90%]"></div>
+              </div>
+            )}
+          </div>
+        </div>
         <div
-          
-          className={`w-[150px] h-[150px] rounded-full ${isOn ? 'bg-yellow-400 shadow-[0_0_40px_yellow] transition-all duration-300' : 'bg-white'}`}
+          className={`w-[150px] h-[150px] rounded-full ${
+            isOn
+              ? "bg-yellow-400 shadow-[0_0_40px_yellow] transition-all duration-300"
+              : "bg-black"
+          }`}
         ></div>
       </div>
     </div>
