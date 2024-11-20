@@ -24,8 +24,8 @@ To get started with this project, clone the repository and install the necessary
 
 
 ```bash
-git clone https://github.com/your-username/bulb-switch-project.git
-cd bulb-switch-project
+git clone https://github.com/kartikpatil28/BulbSwitch.git
+cd BulbSwitch
 npm install
 
 ```
