@@ -1,12 +1,19 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './src/**/*.{js,jsx,ts,tsx}', // Adjust paths based on your project structure
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        currentFlow: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        }
+      },
+      animation: {
+        'current-flow': 'currentFlow 1s linear infinite'
+      }
+    }
   },
   plugins: [],
-}
-
+};
