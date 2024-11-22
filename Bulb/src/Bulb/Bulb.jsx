@@ -17,15 +17,10 @@ const Bulb = () => {
           className="p-3 text-sm font-bold text-white bg-blue-500 rounded-lg shadow-lg mb-4 md:mb-0 md:mr-4 hover:bg-blue-600 transition duration-300"
           onClick={toggleBulb}
         >
-          ON/OFF
+          {isOn ? "OFF" : "ON"}
         </button>
         <div className="relative h-[3px] w-40 md:w-48 mb-4 md:mb-0">
           <div className={`relative h-full w-full ${isOn ? "bg-blue-500" : "bg-blue-500"}`}>
-            {!isOn && (
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-red-500">
-                ✖️
-              </div>
-            )}
             {isOn && (
               <div className="absolute h-full w-full flex overflow-hidden">
                 <div className="animate-current-flow bg-yellow-300 h-full w-[5%] rounded-full"></div>
@@ -35,12 +30,14 @@ const Bulb = () => {
           </div>
         </div>
         <div
-          className={`w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full ${
+          className={`w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full flex items-center justify-center text-2xl font-bold ${
             isOn
               ? "bg-yellow-400 shadow-[0_0_400px_yellow] transition-all duration-300"
-              : "bg-black"
+              : "bg-black text-white"
           }`}
-        ></div>
+        >
+          {isOn ? "OFF" : "ON"}
+        </div>
       </div>
     </div>
   );
