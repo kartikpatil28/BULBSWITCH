@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kartikpatil28.github.io/BulbSwitch",
+  "homepage": "https://kartikpatil28.github.io/BULBSWITCH",
   "name": "bulb",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.3.1",
