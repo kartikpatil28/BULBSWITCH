@@ -30,14 +30,12 @@ const Bulb = () => {
           </div>
         </div>
         <div
-          className={`w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full flex items-center justify-center text-2xl font-bold ${
+          className={`w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full ${
             isOn
               ? "bg-yellow-400 shadow-[0_0_400px_yellow] transition-all duration-300"
-              : "bg-black text-white"
+              : "bg-black"
           }`}
-        >
-          {isOn ? "OFF" : "ON"}
-        </div>
+        ></div>
       </div>
     </div>
   );
