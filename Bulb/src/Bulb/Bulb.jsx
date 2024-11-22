@@ -37,7 +37,7 @@ const Bulb = () => {
         <div
           className={`w-[150px] h-[150px] rounded-full ${
             isOn
-              ? "bg-yellow-400 shadow-[0_0_40px_yellow] transition-all duration-300"
+              ? "bg-yellow-400 shadow-[0_0_400px_yellow] transition-all duration-300"
               : "bg-black"
           }`}
         ></div>
